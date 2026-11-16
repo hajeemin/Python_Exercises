@@ -1,7 +1,9 @@
-# 연습문제
+# 연습문제 4-2
 
-pizzas = ['pepperoni', 'diavolo', 'margeritta']
+pets = ['rabbit','dog','cat']
 
-for pizza in pizzas:
-    print(f"I like {pizza} pizza!!")
-print(f"As you can see I LOVE PIZZAAA!! give me {pizzas}!!")
+for pet in pets:
+    print(f"{pet} is so soft.")
+    print(f"and they are so small..\n")
+
+print(f"{pets} are wonderful friends!")
