@@ -1,17 +1,12 @@
+#공백 지우기
+star ="         *           "
+print(star.rstrip())
+print(star)
+print(star.lstrip())
 
-name = "chopa"
-breed = "mixed"
-color = "silver"
-
-dog_01 = f"{name.upper()} {breed.title()} {color.title()}"
-message = f"\nHello! This is {dog_01.upper()} !!"
-print("\n",message) # 쉼표 중간에 꼭 찍어라! 
-
-print("cold \nwarm \nhot \nfreezing\t💎")
-print("         *           ")
-print("       ****        ")
-print("   *********       ")
-print("   **************     ")
-print("******************* ")
-
-print("\t*\n\t***\n\t*****")
+#접두사 지우기
+j_address = "http://www.jemimi.com"
+print(j_address.removeprefix("http://"))
+j_address_01 = j_address.removeprefix("http://")
+print(j_address_01)
+print(j_address)
