@@ -1,7 +1,10 @@
-message = "chopa is super zzang cute dog."
-message = "chppa is super zzang zzang cut dog."
-print(message.title())
-print(message.upper())
-print(message.lower())
+
+name = "chopa"
+breed = "mixed"
+color = "silver"
+
+dog_01 = f"{name} {breed} {color}"
+
+print(dog_01)
 
 
