@@ -4,7 +4,7 @@ breed = "mixed"
 color = "silver"
 
 dog_01 = f"{name.upper()} {breed.title()} {color.title()}"
-
-print(dog_01)
+message = f"Hello! This is {dog_01.upper()} !!"
+print(message)
 
 
