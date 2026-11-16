@@ -1,23 +1,15 @@
-# 4-10 연습문제
+#4-13
 
-my_foods = ['pizza','burger','chicken','beef','ramen']
-print(f"리스트의 첫 세 항목은:\n{my_foods[:3]}")
-print(f"리스트의 중간 세 항목은:\n{my_foods[1:4]}")
-print(f"리스트의 마지막 세 항목은:\n{my_foods[-3:]}")
+foods = ('잡채','육회','케잌','볶음밥','탕수육')
+print("food menu:")
+for food in foods:
+    print(food,end=" ")
 
-#4-11
 
-my_pizzas = ['pepperoni','diavolo','margeritta']
-friends_pizzas = my_pizzas[:] # 공유가 아니라 복사임!!! 친구가 내 피자 복사한거임!! 서로 별개!!
+#foods[0] = '스시'
+#print(food)        #진짜 에러나는지 확인
 
-my_pizzas.append('hawaian')
-friends_pizzas.append('hot-chicken')
-
-print("my fav pizzas are:")
-for pizza in my_pizzas:
-    print(pizza.title())
-
-print("my friend's fav pizzas are:")
-for pizza in friends_pizzas:
-    print(pizza.title())
-
+foods = ('스시','장어','케잌','볶음밥','탕수육')
+print("\nModified food menu:")
+for food in foods:
+    print(food,end=" ")
