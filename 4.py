@@ -1,9 +1,4 @@
-# 연습문제 4-2
+#연습문제 4-3
 
-pets = ['rabbit','dog','cat']
-
-for pet in pets:
-    print(f"{pet} is so soft.")
-    print(f"and they are so small..\n")
-
-print(f"{pets} are wonderful friends!")
+for num in range(1,21):
+    print(num,end=" ")
