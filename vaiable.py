@@ -52,7 +52,7 @@ print(f"미안해,{cannot_02}. 저녁식사에 두명 밖에 초대를 못하게
 print(f"{guests}, 너희는 아직 초대되었어. 꼭 와!")
 
 print(guests)
-print(f"결국 저녁 식사에는 {len(guests)}명만 와")
+print(f"결국 저녁 식사에는 {len(guests)}명만 와") #len으로 몇명 남았나 알아보기
 
 guests.clear()
 print(guests)
