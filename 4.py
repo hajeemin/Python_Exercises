@@ -1,7 +1,16 @@
-#연습문제 4-3
+#연습문제 4-6
 
-numbers = list(range(1,1000001)) # 엄청나게 긴 리스트 생성하기!!!! numbers = list(range(1,11))
-print(min(numbers)) # 리스트에서 가장 작은! 
-print(max(numbers)) # 리스트에서 가장 큰!
-print(sum(numbers)) # 리스트를 모두 더한!
+# numbers = list(range(1,21,2)) # 1에서 20까지 홀수숫자 구하기
+# print(numbers) 
+
+# number3 = list(range(3,31,3))
+# print(number3) # 리스트를 일단 만들기
+# for numbers in range(3,31,3):
+#     print(numbers,end=" ")
+
+num=1
+numbers = list(range(1,11))
+print(numbers)
+for num in numbers:
+    print(num**3, end=" ")
 
