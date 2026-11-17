@@ -1,12 +1,16 @@
-# 연습문제 5-3 외계인 격추 실패하는 코드
+#연습문제 5-4
 
-alien_color = ['red','purple','green']
+alien_color = ['green','red']
 
-if 'red' in alien_color :
-    print("you've gain 2 points!")
-elif 'yellow' in alien_color :
-    print("you've gain 4 points!")
-elif 'green' in alien_color :
-    print("you've gain 5 points!")
+if alien_color == 'green':
+    print("You won 5points.")
+else:
+    print("You won 10 points.")
 
-print("great job!!")
+
+alien_color = ['green','red']
+
+if 'green' in alien_color:
+    print("5points")
+else:
+    print("10points")
