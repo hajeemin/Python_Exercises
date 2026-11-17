@@ -1,12 +1,8 @@
-#리스트 내용물 확인 / 독립적 if 문
+#5-8
+user_names = ['admin','julian','jeemin']
 
-fruits = ['banana', 'apple', 'tangerine','mango','grapes']
-
-if 'banana' in fruits:
-    print("banana lover~")
-if 'mango' in fruits:
-    print("mange lover~")
-if 'apple' in fruits:
-    print("apple lover~")
-if 'pear' in fruits:
-    print("pear lover~")
+for user_name in user_names:
+    if user_name == 'admin':
+        print("안녕하세요 관리자님, 상태 보고?")
+    else:
+        print(f"안녕 {user_name.title()}! Good to see you again!")
