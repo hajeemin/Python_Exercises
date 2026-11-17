@@ -1,24 +1,20 @@
-#5-8 # 리스트에 원소가 없을때. 출력되게하는 말.
-user_names = ['admin','julian']
+#5-10
 
-for user_name in user_names:
-    if user_name == 'admin':
-        print("안녕하세요 관리자님, 상태 보고?")
+current_users = ['JULIAN','marie','Gemma','jena','jeemin']
+new_users = ['tom','Julian','Sue','gemma','hyun','cecil']
+
+current_users_L = []
+for current_user in current_users:
+    current_users_L.append(current_user.lower())
+print(current_users_L)
+
+new_users_L = []
+for new_user in new_users:
+    new_users_L.append(new_user.lower())
+print(new_users_L)
+
+for new_user_L in new_users_L:
+    if new_user_L in current_users_L:
+        print(f"{new_user_L}>>>이미 등록된 이름입니다. 다른 이름을 입력해주세요.")
     else:
-        print(f"안녕 {user_name.title()}! Good to see you again!")
-
-print("사용자가 있어야함")
-
-#이렇게해도 출력이 되는데 
-
-user_names = ['admin','julian']
-
-if user_names: # 유저네임이 있어서 'True'라고 출력되면 밑으로 내려감. 
-                #true 안에서 또 돌면서 for, if 문 진행.
-    for user_name in user_names:
-        if user_name == 'admin':
-            print("헬로 관리자님!")
-        else:
-            print(f"헬로 {user_name}! 다시 와줘서 고마워!")
-else:
-    print("유저 리스트를 확인해주세요.") 
+        print(f"{new_user_L}>>>사용가능한 이름입니다.")
