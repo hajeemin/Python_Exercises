@@ -1,16 +1,30 @@
-#연습문제 5-4
+#5-5
 
-alien_color = ['green','red']
+alien_colr = 'green'
 
-if alien_color == 'green':
-    print("You won 5points.")
+if alien_colr == 'green':
+    print("5 points")
+elif alien_colr == 'yellow':
+    print("10 points")
 else:
-    print("You won 10 points.")
+    print("15 points")
 
 
-alien_color = ['green','red']
+alien_colr = 'yellow'
 
-if 'green' in alien_color:
-    print("5points")
+if alien_colr == 'green':
+    print("5 points")
+elif alien_colr == 'yellow':
+    print("10 points")
 else:
-    print("10points")
+    print("15 points")
+
+alien_colr = 'red'
+
+if alien_colr == 'green':
+    print("5 points")
+elif alien_colr == 'yellow':
+    print("10 points")
+else:
+    print("15 points")
+
