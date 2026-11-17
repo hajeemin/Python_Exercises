@@ -1,30 +1,16 @@
-#5-5
+#5-6 삶의 단계 
 
-alien_colr = 'green'
+age = int(input("what's your age?"))
 
-if alien_colr == 'green':
-    print("5 points")
-elif alien_colr == 'yellow':
-    print("10 points")
-else:
-    print("15 points")
-
-
-alien_colr = 'yellow'
-
-if alien_colr == 'green':
-    print("5 points")
-elif alien_colr == 'yellow':
-    print("10 points")
-else:
-    print("15 points")
-
-alien_colr = 'red'
-
-if alien_colr == 'green':
-    print("5 points")
-elif alien_colr == 'yellow':
-    print("10 points")
-else:
-    print("15 points")
-
+if age< 2:
+    print("baby")
+if 2<= age < 4:
+    print("toddler")
+if 4<= age < 13:
+    print("kid")
+if 13<= age < 20:
+    print("teenager")
+if 20 <= age < 65:
+    print("adult")
+if 65 <= age:
+    print("elder")
