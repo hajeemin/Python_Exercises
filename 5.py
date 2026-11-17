@@ -1,16 +1,12 @@
-#5-6 삶의 단계 
+#리스트 내용물 확인 / 독립적 if 문
 
-age = int(input("what's your age?"))
+fruits = ['banana', 'apple', 'tangerine','mango','grapes']
 
-if age< 2:
-    print("baby")
-if 2<= age < 4:
-    print("toddler")
-if 4<= age < 13:
-    print("kid")
-if 13<= age < 20:
-    print("teenager")
-if 20 <= age < 65:
-    print("adult")
-if 65 <= age:
-    print("elder")
+if 'banana' in fruits:
+    print("banana lover~")
+if 'mango' in fruits:
+    print("mange lover~")
+if 'apple' in fruits:
+    print("apple lover~")
+if 'pear' in fruits:
+    print("pear lover~")
