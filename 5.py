@@ -84,10 +84,12 @@ family_members = {
     }
 }
 
-print(family_members)
+# print(family_members)
 
-for name, info in family_members.items():
-    print(f"\nIntroducing my family. About {name.title()}:")
-    for key,value in info.items():
-        print(f"\t{key} : {value}")
-        
+# for name, info in family_members.items():
+#     print(f"\nIntroducing my family. About {name.title()}:")
+#     for key,value in info.items():
+#         print(f"\t{key} : {value}")
+
+for name,info in family_members.items():
+    print(f"{name}'s job is a {info['job']}")
