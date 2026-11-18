@@ -1,30 +1,27 @@
-# list = [1:10]
-# print(list) #ㅋㅋ..
+# # person_01 = {'first_name':'hyun','last_name':'lee','age':'34','city':'geneve'}
+# # print(person_01['first_name'])
+# # print(person_01['age'])
+# # print(person_01)
 
-numbers = list(range(1,10))
-print(numbers)
+# fav_number = {
+#     'jen':7,
+#     'sue':5,
+#     'hyun':8,
+#     'jim':2
+#     }
+# print(f"jim's fav number is {fav_number['jim']}")
 
-for number in numbers:
-    if number == 1:
-        print(number,'st')
-    elif number == 2:
-        print(number,'nd')
-    elif number == 3:
-        print(number,'rd')
-    else:
-        print(number,'th')
+###연습문제 6-4
 
-#루프 안에서 if-elif-else 문을 사용해 각 숫자에 맞는 서수 접미사를 출력하세요. 이들은 별도 행으로 출력되어야합니다. 
+fav_colors = {
+    'Jen':'yellow',
+    'Tom' : 'green',
+    'sue': 'red',
+    'jena': 'blue',
+    'julian': 'purple',
+}
 
-numbers = list(range(1,10))
-print(numbers)
+for name, color in fav_colors.items(): #for문에서 한 세트를 한번에 꺼내는 법! 
+    print(f"{name.title()}'s fave color is {color.title()}")
 
-for number in numbers:
-    if number == 1:
-        print(f"{number}st")
-    elif number == 2:
-        print(f"{number}nd")
-    elif number == 3:
-        print(f"{number}rd")
-    else:
-        print(f"{number}th")
+print(fav_colors['Jen'])
