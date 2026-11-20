@@ -1,0 +1,29 @@
+# def city_country():
+#     city = input("도시 이름:")
+#     country = input(f"'{city}' 이/가 속한 나라:")
+#     return f'"{city}, {country}"'
+ 
+
+# print(city_country())
+
+def make_album(artist, album_name, number_of_songs=None):
+    album = {
+        'Artist': artist, 
+        'Album_name': album_name
+        }
+    if number_of_songs:
+        album[number_of_songs] = number_of_songs
+    return album
+
+while True:
+    print("\n아티스트와 앨범명 수록곡(필수 아님) 수를 입력하세요.\n(멈추고자할땐 언제든 'q'를 입력하세요.)")
+    
+    user_artist = input("아티스트 이름을 입력하세요:")
+    if user_artist == 'q':
+        break
+
+    user_album = input("앨범명을 입력하세요:")
+    if user_album == 'q':
+        break
+    user_album_foam = make_album(user_artist, user_album)
+    print(user_album_foam)
