@@ -33,14 +33,28 @@
 
 
 
-def build_profile(first, last, **user_info):
-    user_info['first_name'] = first.title()
-    user_info['last_name'] = last.title()
-    return user_info
+# def build_profile(first, last, **user_info):
+#     user_info['first_name'] = first.title()
+#     user_info['last_name'] = last.title()
+#     return user_info
 
-user_profile = build_profile('jeemin','ha',
-                            location = 'seoul',
-                            age = 34,
-                            married = 'Yes')
+# user_profile = build_profile('jeemin','ha',
+#                             location = 'seoul',
+#                             age = 34,
+#                             married = 'Yes')
 
-print(user_profile)
+# print(user_profile)
+
+def build_car(company, model_name, **car_info):
+    car_info['company_name'] = company.title()
+    car_info['car_model'] = model_name.title()
+    return car_info
+    #return 'company_name', 'car_model'
+
+about_car = build_car('lexus','ux300h',
+                      color = 'champaign',
+                      sun_roof = 'yes',
+                      memory_seat = 'no',
+                      )
+
+print(about_car)
