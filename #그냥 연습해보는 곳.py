@@ -163,4 +163,13 @@
 # greet_users(usernames)
 
 
-ㅇㄷ
+
+
+height = int(input("insert number"))
+
+for row in range(1, height + 1):
+    space = " " * (height-row)
+    star = "*" * ((row*2)-1)
+    
+    print(space + star)
+
