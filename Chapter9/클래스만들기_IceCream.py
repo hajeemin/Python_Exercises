@@ -30,24 +30,58 @@ class IceCreamStand(Restaurant):
         super().__init__(name, cuisine_type)
         self.flavors = []
         self.soldouts = []
+        self.reorders = []
+        
 
     def show_flavors(self):
         print("\nWe have the following flavors available:")
         for flavor in self.flavors:
             print(f"-{flavor.title()}")
 
-    def show_sold_outs(self, flavor):
-        self.soldouts.append(flavor)
-        print(f"\n Currently Sold Out:")
+    def show_sold_outs(self, flavors):
+        for flavor in flavors:
+            self.soldouts.append(flavor)
+            self.flavors.remove(flavor)
+        print(f"\nCurrently Sold Out:")
         for soldout in self.soldouts:
-            print(f"-{soldout.title()}")
-        self.flavors.remove(flavor)
+            print(f"-{soldout}")
+
+    def show_reorders(self, flavors):
+        self.reorders.extend(flavors)
+        print(f"\nReorder list:")
+        for flavor in self.reorders:
+            print(f"-{flavor}")
+
+    def show_restocks(self, flavors):
+        for flavor in flavors:
+            if flavor in self.flavors:
+                pass
+            else:
+                self.flavors.append(flavor)
+            self.soldouts.remove(flavor)
+
+            print(f"\n{flavor} is now restocked!")
+
+
+    def check_flavor(self, flavor):
+        if flavor in self.flavors:
+            print(f"\nYes, We have {flavor} now! ")
+        else:
+            print(f"\nSorry, we don't have {flavor} right now..")
+
+    def calculate_price(self):
+        number = int(input("\nNumber of ice-cream you'd like to order:"))
+        price = number * 5000
+        return price
+
+    def closing(self):
+        print(f"{self.name} is closed.")
+        
 
 big_one = IceCreamStand('The Big one')
-big_one.flavors = ['vanila', 'chocolate', 'black cherry']
-big_one.describe_restaurant()
-big_one.show_sold_outs('vanila')
-big_one.flavors.append('strawberry')
-big_one.show_flavors()
-big_one.set_number_served(40)
+big_one.flavors = ['vanila', 'chocolate', 'black cherry', 'mint','pistachio', 'strawberry']
 
+big_one.show_sold_outs(['vanila'])
+# big_one.show_flavors()
+big_one.check_flavor('vanila')
+big_one.show_restocks(['vanila'])
