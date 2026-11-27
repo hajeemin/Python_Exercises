@@ -22,18 +22,38 @@ class Car:
     def increment_odometer(self, miles):
         self.odometer_reading += miles
 
+    def fill_gas_tank(self):
+        pass
 
-my_new_Car = Car('audi','a4', '2024')
-print(my_new_Car.get_descriptive_name())
+# my_new_Car = Car('audi','a4', '2024')
+# print(my_new_Car.get_descriptive_name())
 
-my_new_Car.odometer_reading = 23
-my_new_Car.read_odometer()
+# my_new_Car.odometer_reading = 23
+# my_new_Car.read_odometer()
 
-my_used_car = Car('subaru', 'outback', 2019)
-print(my_used_car.get_descriptive_name())
+# my_used_car = Car('subaru', 'outback', 2019)
+# print(my_used_car.get_descriptive_name())
 
-my_used_car.update_odometer(23_500)
-my_used_car.read_odometer()
+# my_used_car.update_odometer(23_500)
+# my_used_car.read_odometer()
 
-my_used_car.increment_odometer(100)
-my_used_car.read_odometer()
+# my_used_car.increment_odometer(100)
+# my_used_car.read_odometer()
+
+##################자식 클래스 만들기######################
+
+class ElectricCar(Car):
+    def __init__(self, make, model, year):
+        super().__init__(make, model, year)
+        self.battery_size = 40
+
+    def describe_battery(self):
+        print(f"This car has a {self.battery_size}-KWh battery.")
+
+    def fill_gas_tank(self):
+        print("This car doesn't have a gas tank!")
+
+my_leaf = ElectricCar('nissan', 'leaf', 2024)
+print(my_leaf.get_descriptive_name())
+my_leaf.describe_battery()
+

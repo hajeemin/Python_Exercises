@@ -54,6 +54,8 @@ class Restaurant:
         print(f" {number} more customers visited.")
         print(f"There were {self.number_served} customers in total today. ")
 
+    
+
 restaurant= Restaurant('Kiwajip','Korean') #인스턴스 A (객체)
 
 restaurant.set_number_served(50)
