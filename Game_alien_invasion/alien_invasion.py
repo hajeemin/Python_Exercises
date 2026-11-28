@@ -8,7 +8,7 @@ class AlienInvasion:
     def __init__(self):
         """게임 자원을 초기화하고 게임 자원을 만듦"""
         pygame.init()
-
+        self.clock = pygame.time.Clock()
         self.screen = pygame.display.set_mode((1200, 800))
         pygame.display.set_caption("Alien Invasion")
 
@@ -22,8 +22,9 @@ class AlienInvasion:
 
             #가장 최근 그린 화면을 표시
             pygame.display.flip()
+            self.clock.tick(60)
 
 if __name__ == '__main__':
     ai = AlienInvasion()
     ai.run_game()
-    
+
