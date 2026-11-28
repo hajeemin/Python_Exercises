@@ -28,18 +28,38 @@ class User:
 class Admin(User):
     def __init__(self, first_name, last_name, age, nationality, gender):
         super().__init__(first_name, last_name, age, nationality, gender)
-        self.privileges = []
+        self.privileges = Privileges()
+
+    # def show_privileges(self):
+    #     print("\nPrivilleges:")
+    #     for privillege in self.privileges:
+    #         print(f"-{privillege}")
+
+class Privileges:
+    """a class to store an admin's privileges."""
+
+    def __init__(self, privileges=[]):
+        self.privileges = privileges
 
     def show_privileges(self):
-        print("\nPrivilleges:")
-        for privillege in self.privileges:
-            print(f"-{privillege}")
+        print("\nPrivileges:")
+        if self.privileges:
+            for privilege in self.privileges:
+                print(f"-{privilege}")
+
+        else:
+            print(f"- This user has no privileges. ")
+
 
 jimin = Admin('jimin', 'ha', '34', 'korean','F')
 jimin.describe_User()
-jimin.privileges = [
+
+jimin.privileges.show_privileges()
+
+print("\nAdding privileges...")
+jimin.privileges.privileges = [
     'can delet post',
     'cad add post',
     'can ban user'
 ]
-jimin.show_privileges()
+jimin.privileges.show_privileges()
