@@ -8,7 +8,7 @@ class Ship:
         self.screen_rect = ai_game.screen.get_rect()
 
         #우주선 이미지를 불러오고 사각형을 가져온다.
-        self.image = pygame.image.load('images/ship.bmp')
+        self.image = pygame.image.load('Game_alien_invasion/images/ship.png')
         self.rect = self.image.get_rect()
 
         #우주선 초기 위치는 화면 하단 중앙입니다.

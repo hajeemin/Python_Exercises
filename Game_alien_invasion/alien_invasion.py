@@ -3,6 +3,7 @@ import sys
 import pygame
 
 from settings import Settings
+from ship import Ship
 
 class AlienInvasion:
     """게임 자원과 동작을 전체적으로 관리하는 클래스"""
@@ -17,6 +18,9 @@ class AlienInvasion:
             (self.settings.screen_width, self.settings.screen_height))
         pygame.display.set_caption("Alien Invasion")
 
+        self.ship = Ship(self)
+
+
     def run_game(self):
         """게임의 메인 루프 시작"""
         while True:
@@ -27,6 +31,7 @@ class AlienInvasion:
 
             #루프 반복때마다 화면을 다시 그림
             self.screen.fill(self.settings.bg_color)
+            self.ship.blitme()
 
             #가장 최근 그린 화면을 표시
             pygame.display.flip()
